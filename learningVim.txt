@@ -1,0 +1,51 @@
+Commands:
+	navigation in normal form:
+		j - moves the cursor down
+		k - moves the cursor up
+		h - moves the cursor right
+		l - moves the cursor left
+		
+	navigation in the lines(By using the words count):
+		"n"+w -> will move that many words and stops at the starting of next word
+		"n"+e -> will move that many words and stops at the ending of last word
+		CTRL-G -> will show your location in the file and the file status
+		G -> will go to the end of the file
+		gg -> will go to the starting of the file
+		<number> + (gg/G) -> will move to the starting of that numbered line in the file.
+		% -> will go to the starting/ending of only that kind of backets
+	Exiting from vim:
+		:q! - exits from the editor with discarding any changes
+		:wq - save a file and exit the editor.
+		
+	Deleting from normal mode:
+		x - delete the character under the cursor
+		dw - delete a word upto the starting of next word(the cursur should be at the begining of the word you want to delete) including the space(" ")
+		d$ - deleting the line after  cursor.
+		de - deleting the word excluding space(" ").
+		d+<number>+<motion> - deleting the words(w) or ends(e) or lines($) by the count of words.  
+		dd - delete the whole line.
+	
+	Inserting in vim:
+		i - we will go to insert mode
+		A - we can append in a line(Doesn't matter where the cursor is in that line!)
+		p - we use this to paste which was previously deleted by "dd"
+		r - this is used to replace the letters in normal mode
+	Unding the the commands:
+		u - unding the previous actions
+		U - unding all the changes on a line
+	Changing in normal mode:
+		ce - this will change from the starting of the current position of cursor to the end.
+		c+<number>+w - this will delete the number of words in the line
+		c + [number] + <motion> - change the number of "motion"
+			Eg: $ -> end of the line
+			    w -> words
+			    e -> spaces
+	        :#,#s/old/new/g -> where #,# are the line numbers of the range of line numbers of range of lines where the substitution is to be done.
+		:s/old/new/g -> changes all occurrences of "old" to "new" in the line(without /g at the ending it will change only first occurance)    
+		:%s/old/new/g -> changes every occurrence in the whole file.
+		:%s/ole/new/gc -> to find every occurrence in the whole file, with a prompt whether to substitute or not.	
+		
+"fajs("(dfkj')
+
+
+({)}
